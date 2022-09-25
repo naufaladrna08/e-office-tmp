@@ -1,0 +1,154 @@
+<svg id="Struktur_OG" data-name="Struktur OG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="687" viewBox="0 0 1600 687">
+  <defs>
+    <style>
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke: #651ce9;
+        stroke-width: 5px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2, .cls-9 {
+        font-size: 24px;
+        fill: #111;
+        font-family: Poppins;
+      }
+
+      .cls-2 {
+        font-weight: 500;
+      }
+
+      .cls-3 {
+        filter: url(#filter-2);
+      }
+
+      .cls-4 {
+        filter: url(#filter-3);
+      }
+
+      .cls-5 {
+        filter: url(#filter-4);
+      }
+
+      .cls-6 {
+        filter: url(#filter-5);
+      }
+
+      .cls-7 {
+        filter: url(#filter-6);
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+
+      .cls-9 {
+        font-weight: 700;
+      }
+    </style>
+    <filter id="filter" x="574" y="3047" width="421" height="186" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.55"/>
+      <feFlood result="flood" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="574" y="3227" width="421" height="185" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.55"/>
+      <feFlood result="flood" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="277" y="3408" width="421" height="185" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.55"/>
+      <feFlood result="flood" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="894" y="3408" width="421" height="186" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.55"/>
+      <feFlood result="flood" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="-15" y="3227" width="421" height="185" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.55"/>
+      <feFlood result="flood" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-6" x="1185" y="3227" width="421" height="185" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.55"/>
+      <feFlood result="flood" flood-opacity="0.15"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Ketua">
+    <g transform="translate(0 -2907)" style="fill: #fff; filter: url(#filter)">
+      <path id="path" class="cls-1" d="M652.794,3106.19h262a20,20,0,0,1,20,20v26.63a20,20,0,0,1-20,20h-262a20,20,0,0,1-20-20v-26.63A20,20,0,0,1,652.794,3106.19Z" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use transform="translate(0 -2907)" xlink:href="#path" style="stroke: #651ce9; filter: none; fill: none"/>
+    <text id="KETUA-2" data-name="KETUA" class="cls-2" transform="translate(744.411 243.251) scale(1.075)">KETUA</text>
+  </g>
+  <g id="Wakil_Ketua" data-name="Wakil Ketua">
+    <g transform="translate(0 -2907)" style="fill: #fff; filter: url(#filter-2)">
+      <path id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-3" d="M652.794,3285.67h262a20,20,0,0,1,20,20v26.63a20,20,0,0,1-20,20h-262a20,20,0,0,1-20-20v-26.63A20,20,0,0,1,652.794,3285.67Z" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use transform="translate(0 -2907)" xlink:href="#Rectangle_1_copy" style="stroke: #651ce9; filter: none; fill: none"/>
+    <text id="WAKIL_KETUA-2" data-name="WAKIL KETUA" class="cls-2" transform="translate(701.421 421.662) scale(1.075)">WAKIL KETUA</text>
+  </g>
+  <g id="Koordinator_Area" data-name="Koordinator Area">
+    <g transform="translate(0 -2907)" style="fill: #fff; filter: url(#filter-3)">
+      <path id="Rectangle_1_copy_4" data-name="Rectangle 1 copy 4" class="cls-4" d="M356.163,3466.77H618.168a20,20,0,0,1,20,20v26.63a20,20,0,0,1-20,20h-262a20,20,0,0,1-20-20v-26.63A20,20,0,0,1,356.163,3466.77Z" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use transform="translate(0 -2907)" xlink:href="#Rectangle_1_copy_4" style="stroke: #651ce9; filter: none; fill: none"/>
+    <text id="KOORDINATOR_AREA-2" data-name="KOORDINATOR AREA" class="cls-2" transform="translate(365.024 602.216) scale(1.075)">KOORDINATOR AREA</text>
+  </g>
+  <g id="Bidang">
+    <g transform="translate(0 -2907)" style="fill: #fff; filter: url(#filter-4)">
+      <path id="Rectangle_1_copy_5" data-name="Rectangle 1 copy 5" class="cls-5" d="M973.069,3467.3h262a20,20,0,0,1,20,20v26.64a20,20,0,0,1-20,20h-262a20,20,0,0,1-20-20V3487.3A20,20,0,0,1,973.069,3467.3Z" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use transform="translate(0 -2907)" xlink:href="#Rectangle_1_copy_5" style="stroke: #651ce9; filter: none; fill: none"/>
+    <text id="BIDANG-BIDANG" class="cls-2" transform="translate(1012.024 602.216) scale(1.075)">BIDANG-BIDANG</text>
+  </g>
+  <g id="Sekretaris">
+    <g transform="translate(0 -2907)" style="fill: #fff; filter: url(#filter-5)">
+      <path id="Rectangle_1_copy_2" data-name="Rectangle 1 copy 2" class="cls-6" d="M63.831,3285.67h262a20,20,0,0,1,20,20v26.63a20,20,0,0,1-20,20h-262a20,20,0,0,1-20-20v-26.63A20,20,0,0,1,63.831,3285.67Z" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use transform="translate(0 -2907)" xlink:href="#Rectangle_1_copy_2" style="stroke: #651ce9; filter: none; fill: none"/>
+    <text id="SEKRETARIS-2" data-name="SEKRETARIS" class="cls-2" transform="translate(124.281 420.584) scale(1.075)">SEKRETARIS</text>
+  </g>
+  <g id="Bendahara">
+    <g transform="translate(0 -2907)" style="fill: #fff; filter: url(#filter-6)">
+      <path id="Rectangle_1_copy_3" data-name="Rectangle 1 copy 3" class="cls-7" d="M1264.33,3285.67h262a19.994,19.994,0,0,1,20,20v26.63a19.994,19.994,0,0,1-20,20h-262a19.994,19.994,0,0,1-20-20v-26.63A19.994,19.994,0,0,1,1264.33,3285.67Z" style="stroke: inherit; filter: none; fill: inherit"/>
+    </g>
+    <use transform="translate(0 -2907)" xlink:href="#Rectangle_1_copy_3" style="stroke: #651ce9; filter: none; fill: none"/>
+    <text id="BENDAHARA-2" data-name="BENDAHARA" class="cls-2" transform="translate(1316.178 420.584) scale(1.075)">BENDAHARA</text>
+  </g>
+  <path class="cls-8" d="M783.259,3174.97v110.7" transform="translate(0 -2907)"/>
+  <path id="Shape_3_copy" data-name="Shape 3 copy" class="cls-8" d="M783.8,3352.3v88.13" transform="translate(0 -2907)"/>
+  <g id="Line_1" data-name="Line 1">
+    <path class="cls-8" d="M195.371,3256.65v27.95" transform="translate(0 -2907)"/>
+    <path class="cls-8" d="M1395.87,3285.67v-29.02" transform="translate(0 -2907)"/>
+    <path class="cls-8" d="M1396.94,3258.8H195.371" transform="translate(0 -2907)"/>
+  </g>
+  <g id="Line_1_copy" data-name="Line 1 copy">
+    <path class="cls-8" d="M485.035,3437.72v28.49" transform="translate(0 -2907)"/>
+    <path class="cls-8" d="M1102.98,3467.3v-29.58" transform="translate(0 -2907)"/>
+    <path class="cls-8" d="M1103.53,3439.91H485.035" transform="translate(0 -2907)"/>
+  </g>
+  <text id="STRUKTUR_ORGANISASI" data-name="STRUKTUR ORGANISASI" class="cls-9" transform="translate(548.866 28.939) scale(1.689)">STRUKTUR ORGANISASI</text>
+</svg>

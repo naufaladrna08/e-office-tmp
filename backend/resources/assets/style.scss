@@ -1,0 +1,39 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+$blue: #22b8e4;
+
+// Required
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+// Optional Bootstrap components here
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+// etc
+
+$border-radius: 5rem;
+$border-width: 1px;
+
+.btn {
+  // Output calc(.25rem - 1px) is valid
+  border-radius: calc($border-radius - $border-width);
+
+  .primary {
+    background-color: #22b8e4;
+  }
+}
+
+.btn {
+  // Output the same calc(.25rem - 1px) as above
+  border-radius: subtract($border-radius, $border-width);
+
+  .primary {
+    background-color: #22b8e4;
+  }
+}
+
+#app {
+  margin: 0 !important;
+  padding: 0 !important;
+}
