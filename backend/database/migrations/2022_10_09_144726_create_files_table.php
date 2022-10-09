@@ -14,6 +14,7 @@ return new class extends Migration {
     Schema::create('files', function (Blueprint $table) {
       $table->id();
       $table->integer('uid');
+      $table->string('name');
       $table->string('path');
       $table->string('extension'); /* For icon */
       $table->timestamps();
