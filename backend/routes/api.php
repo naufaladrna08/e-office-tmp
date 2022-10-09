@@ -132,7 +132,7 @@ Route::group(['prefix' => 'archive', 'middleware' => 'auth:sanctum'], function()
   Route::post('send', [App\Http\Controllers\ArchiveController::class, 'sendToArchive']);
   Route::post('delete', [App\Http\Controllers\ArchiveController::class, 'delete']);
   Route::get('read-all', [App\Http\Controllers\ArchiveController::class, 'index']);
-  
+  Route::get('files', [App\Http\Controllers\FileController::class, 'index']);
 });
 
 Route::group(['prefix' => 'attachment', 'middleware' => 'auth:sanctum'], function() {
