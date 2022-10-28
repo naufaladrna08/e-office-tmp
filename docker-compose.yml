@@ -1,0 +1,56 @@
+version: '2.10.2'
+
+services:
+  # Vue + Node.js
+  web:
+    container_name: web_effice
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: webeffice:1.0
+    volumes:
+      - web_effice:/var/www
+    ports:
+      - "8012:80"
+  
+  # PHP + Composer
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: appeoffice:1.0
+    container_name: app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app 
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - app_eoffice:/var/www
+      - ./backend/extern/conf.d/php-local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - app-network
+
+  # Nginx
+  server:
+    image: nginx:alpine
+    container_name: server_eoffice
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "8090:80"
+    volumes:
+      - app_eoffice:/var/www
+      - ./backend/extern/conf.d:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  web_effice:
+  app_eoffice:
+  webserver_eoffice:
