@@ -7,7 +7,8 @@ import NewMessageView from '../views/Mail/NewMessageView.vue'
 import InboxView from '../views/Mail/InboxView.vue'
 import ReadView from '../views/Mail/ReadView.vue'
 import UserView from '../views/UserView.vue'
-import ArchiveView from '../views/ArchiveView.vue'
+import ArchivePersonalView from '../views/Archive/PersonalView.vue'
+import ArchiveMailView from '../views/Archive/MailView.vue'
 import AdminView from '../views/Admin/AdminView.vue'
 import ParameterView from '../views/Admin/ParameterView.vue'
 import ManageUserView from '../views/Admin/ManageUserView.vue'
@@ -83,9 +84,17 @@ const routes = [
     }
   },
   {
-    path: '/archive',
-    name: 'Archive',
-    component: ArchiveView,
+    path: '/archive/personal',
+    name: 'Archive Personal',
+    component: ArchivePersonalView,
+    meta: {
+      middleware: "auth",
+    }
+  },
+  {
+    path: '/archive/mail',
+    name: 'Archive Mail',
+    component: ArchiveMailView,
     meta: {
       middleware: "auth",
     }
