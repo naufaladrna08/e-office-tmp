@@ -3,15 +3,17 @@ version: '2.10.2'
 services:
   # Vue + Node.js
   web:
-    container_name: web_effice
+    container_name: web_eoffice
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    image: webeffice:1.0
+    image: webeoffice:1.0
     volumes:
-      - web_effice:/var/www
+      - web_eoffice:/var/www
     ports:
       - "8012:80"
+    networks:
+      - app-network
   
   # PHP + Composer
   app:
@@ -23,8 +25,11 @@ services:
     restart: unless-stopped
     tty: true
     environment:
-      SERVICE_NAME: app 
-      SERVICE_TAGS: dev
+      - SERVICE_NAME=app 
+      - SERVICE_TAGS=dev
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_PORT=5433
     working_dir: /var/www
     volumes:
       - app_eoffice:/var/www
@@ -45,12 +50,28 @@ services:
       - ./backend/extern/conf.d:/etc/nginx/conf.d/
     networks:
       - app-network
+  
+  db:
+    image: "postgres:bullseye"
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "5440:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=eoffice
+    networks:
+      - app-network
+    volumes:
+      - db_eoffice:/var/lib/postgresql/data
 
 networks:
   app-network:
     driver: bridge
 
 volumes:
-  web_effice:
+  web_eoffice:
   app_eoffice:
-  webserver_eoffice:
+  db_eoffice:
