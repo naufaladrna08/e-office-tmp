@@ -14,8 +14,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.js'
 import '@/assets/style.scss'
 
 require('@/store/subscriber')
-
-axios.defaults.baseURL = 'http://127.0.0.1:8000/api'
+axios.defaults.baseURL = process.env.VUE_APP_API_URL
 axios.defaults.withCredentials = true
 
 store.dispatch('auth/me', localStorage.getItem('token')).then(() => {
