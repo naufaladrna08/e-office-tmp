@@ -1,5 +1,8 @@
 FROM php:8.1.0-fpm
 
+# Update root password
+RUN echo 'root:Docker!' | chpasswd
+
 # Copy composer.lock and composer.json
 COPY composer.lock composer.json /var/www/
 
@@ -15,8 +18,10 @@ RUN set -eux; \
     apt-get upgrade -y; \
     apt-get install -y --no-install-recommends \
             curl \
+            zip \
             libmemcached-dev \
             libz-dev \
+            libzip-dev \
             libpq-dev \
             libjpeg-dev \
             libpng-dev \
@@ -25,6 +30,7 @@ RUN set -eux; \
             libwebp-dev \
             libxpm-dev \
             libmcrypt-dev \
+            zlib1g-dev \
             libonig-dev; \
     rm -rf /var/lib/apt/lists/*
 
@@ -41,6 +47,8 @@ RUN set -eux; \
             --with-xpm \
             --with-freetype; \
     docker-php-ext-install gd; \
+    docker-php-ext-configure zip; \
+    docker-php-ext-install zip; \
     php -r 'var_dump(gd_info());'
 
 # Install composer
@@ -58,6 +66,9 @@ COPY --chown=www:www . /var/www
 
 # Change current user to www
 USER www
+
+# Run composer install
+RUN cd /var/www && composer install
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
