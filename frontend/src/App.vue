@@ -9,24 +9,16 @@
     </div>
 
     <div v-if="user">
-      <div class="sidebar d-flex flex-column flex-shrink-0 bg-light" style="width: 4.5rem;">
+      <div class="sidebar d-flex flex-column flex-shrink-0 bg-light px-2 py-2" style="width: 4.5rem;">
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
           <li class="nav-item">
             <router-link to="/dashboard" class="nav-link py-3 border-bottom" :class="currentRoute === 'Dashboard' ? 'active' : ''" title="Dashboard">
               <i class="fa fa-home" style="width: 24px; height: 24px"></i>
             </router-link>
           </li>
-          <!-- <li>
-            <router-link to="/user" class="nav-link py-3 border-bottom" :class="currentRoute === 'User' ? 'active' : ''" title="User">
-              <i class="fa fa-user" style="width: 24px; height: 24px"></i>
-            </router-link>
-          </li> -->
           <li>
-            <!-- <router-link to="/mail/new" class="nav-link py-3 border-bottom" :class="currentRoute === 'Create Mail' ? 'active' : ''" title="Create Mail">
-              <i class="fa fa-inbox" style="width: 24px; height: 24px"></i>
-            </router-link> -->
             <div class="dropdown border-top">
-              <a href="#" class="d-flex align-items-center justify-content-center p-3 text-decoration-none" id="maildropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <a href="#" class="d-flex align-items-center justify-content-center p-3 text-decoration-none" :class="currentRoute === 'New Message' || currentRoute === 'Inbox' ? 'bg-primary text-white' : ''" id="maildropdown" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa fa-inbox" style="width: 24px; height: 24px"></i>
               </a>
               <ul class="dropdown-menu text-small shadow" aria-labelledby="maildropdown">
@@ -36,12 +28,19 @@
             </div>
           </li>
           <li>
-            <router-link to="/archive" class="nav-link py-3 border-bottom" :class="currentRoute === 'Archive' ? 'active' : ''" title="Archive">
-              <i class="fa fa-archive" style="width: 24px; height: 24px"></i>
-            </router-link>
+            <div class="dropdown border-top">
+              <a href="#" class="d-flex align-items-center justify-content-center p-3 text-decoration-none" :class="currentRoute === 'Archive Personal' || currentRoute === 'Archive Mail' ? 'bg-primary text-white' : ''"  id="archivedropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-archive" style="width: 24px; height: 24px"></i>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="archivedropdown">
+                <li><a class="dropdown-item" href="/archive/dokumenpenting"> Dokumen Penting </a></li>
+                <li><a class="dropdown-item" href="/archive/personal"> Laporan Keuangan </a></li>
+                <li><a class="dropdown-item" href="/archive/mail"> Kotak Aspirasi </a></li>
+              </ul>
+            </div>
           </li>
-          <li v-if="userdata.role === 'admin'">
-            <router-link to="/admin" class="nav-link py-3 border-bottom" title="Admin">
+          <li class="nav-item" v-if="userdata.role === 'admin'">
+            <router-link to="/admin" class="nav-link py-3 border-bottom" :class="currentRoute === 'Admin' ? 'active' : ''" title="Admin">
               <i class="fa fa-dashboard" style="width: 24px; height: 24px"></i>
             </router-link>
           </li>
@@ -53,7 +52,7 @@
         </ul>
         <div class="dropdown border-top">
           <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false">
-            <img :src="userdata.profile_path" width="24" height="24" class="rounded-circle">
+            <img src="http://localhost:8000/images/empty-avatar.png" width="24" height="24" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
             <li><a class="dropdown-item" href="javascript:void(0);" @click="logout"> Sign out </a></li>
